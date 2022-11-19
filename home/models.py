@@ -1,11 +1,12 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
-from django.forms import ValidationError
-
 
 class BookUp(models.Model):
     autor = models.CharField(max_length=255)
     titulo = models.CharField(max_length=255)
     assunto = models.CharField(max_length=255)
+    editora = models.CharField(null=True, blank=False, max_length=255)
+    site_editora = models.CharField(null=True, blank=False, max_length=255)
     
     period_in_school = [
        ('1', 'Primeiro Período'),
@@ -19,11 +20,7 @@ class BookUp(models.Model):
     descricao = models.TextField()
     pesquisa = models.TextField()
 
-    def validate_file_extension(value):
-        if value.file.content_type != 'application/pdf':
-            raise ValidationError('Arquivo Inválido')
-
-    upload = models.FileField(upload_to='uploads/', null=False, blank=False, validators=[validate_file_extension])
+    upload = models.FileField(upload_to='uploads/',null=True, blank=False, validators=[FileExtensionValidator( ['pdf'] ) ])
 
     def __str__(self):
         return self.titulo
