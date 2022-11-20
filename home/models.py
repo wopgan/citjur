@@ -14,9 +14,14 @@ class BookUp(models.Model):
        ('3', 'Terceiro Período'),
        ('4', 'Quarto Período'),
        ('5', 'Quinto Período'),
+       ('6', 'Sexto Período'),
+       ('7', 'Setimo Período'),
+       ('8', 'Quinto Período'),
+       ('9', 'Quinto Período'),
+       ('10', 'Quinto Período'),
     ]
 
-    periodo = models.CharField(max_length=1, choices = period_in_school)
+    periodo = models.CharField(max_length=2, choices = period_in_school)
     descricao = models.TextField()
     pesquisa = models.TextField()
 
