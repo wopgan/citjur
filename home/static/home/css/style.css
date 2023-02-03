@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(
+        to right,
+        rgb(1.6, 16.1, 25.1)50%,
+        rgb(0.0, 36.1, 32.5)50% 
+    );
+    color: #fff;
+}
+
+.img-logo {
+    width: 3.5rem;
+}
+
+.menu-name {
+    color: #fff;
+}
+
+.social {
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.social:hover {
+    color: #c9c9c9;
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0.1em 0.1em 0.2em #DBF227;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 15%;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #151515;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-class {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    font-size: 0.9rem;
+}
+
+.makeit {
+    position: absolute;
+    bottom: 0;
+    margin-left: 40%;
+    font-size: 0.7rem;
+}
